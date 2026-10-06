@@ -8,11 +8,12 @@ export function Avatar({ uri, name, size = 58 }: Props) {
   const [imageFailed, setImageFailed] = useState(false);
   useEffect(() => setImageFailed(false), [uri]);
   const initials = name.trim().split(/\s+/).slice(-2).map((part) => part[0]?.toUpperCase()).join('') || '?';
-  const style = { width: size, height: size, borderRadius: size / 2 };
+  const cornerRadius = Math.max(8, Math.round(size * 0.12));
+  const avatarStyle = { width: size, height: size, borderRadius: cornerRadius };
   return (
-    <View style={[styles.frame, style]}>
+    <View style={[styles.frame, avatarStyle]}>
       {uri && !imageFailed
-        ? <Image source={{ uri }} style={[styles.image, style]} onError={() => setImageFailed(true)} />
+        ? <Image source={{ uri }} style={[styles.image, avatarStyle]} onError={() => setImageFailed(true)} />
         : <Text style={[styles.initials, { fontSize: Math.max(16, size * 0.27) }]}>{initials}</Text>}
     </View>
   );
