@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Student Manager",
+    "slug": "student-manager-buoi-4",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Student Manager to select a student avatar from your photos.",
+          "cameraPermission": false
+        }
+      ]
+    ],
+    "android": {
+      "package": "com.studentmanager.buoi4"
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
