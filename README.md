@@ -28,11 +28,21 @@ npx expo start
 
 For Android, run `npx expo start --android`. The app can also run in a browser with `npx expo start --web`.
 
+## Checks
+
+Run `npx tsc --noEmit` for the TypeScript check, `npx expo export --platform web` to bundle the web target, and `npm run test:data` to validate the demo dataset and translation-key parity.
+
+The latest results and unverified flows are recorded in [TEST_RESULTS.md](./TEST_RESULTS.md).
+
 ## Local data
 
 AsyncStorage stores a JSON array under `@student-manager/students`. Each student contains an internal ID, full name, student ID, email, avatar URI and source, and created/updated timestamps. Device-selected photos are copied into the app document directory; URL avatars retain their URL.
 
 The language preference is stored under `@student-manager/language`. Removing this preference makes the app use the device language again on the next launch.
+
+## Sample data
+
+`data/students.sample.json` contains five fictional student records with reserved `.example` email addresses and sample avatar URLs. The app does not seed them automatically; add the records through the form when you want to demo a populated roster.
 
 ## Prototype reference
 

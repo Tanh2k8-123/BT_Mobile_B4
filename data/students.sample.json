@@ -1,0 +1,52 @@
+[
+  {
+    "id": "sample-001",
+    "fullName": "Avery Morgan",
+    "studentId": "SM-2024-001",
+    "email": "avery.morgan@student.example",
+    "avatarUri": "https://i.pravatar.cc/300?img=12",
+    "avatarSource": "url",
+    "createdAt": "2026-10-06T00:00:00.000Z",
+    "updatedAt": "2026-10-06T00:00:00.000Z"
+  },
+  {
+    "id": "sample-002",
+    "fullName": "Jordan Lee",
+    "studentId": "SM-2024-002",
+    "email": "jordan.lee@student.example",
+    "avatarUri": "https://i.pravatar.cc/300?img=13",
+    "avatarSource": "url",
+    "createdAt": "2026-10-06T00:00:00.000Z",
+    "updatedAt": "2026-10-06T00:00:00.000Z"
+  },
+  {
+    "id": "sample-003",
+    "fullName": "Riley Chen",
+    "studentId": "SM-2024-003",
+    "email": "riley.chen@student.example",
+    "avatarUri": "https://i.pravatar.cc/300?img=14",
+    "avatarSource": "url",
+    "createdAt": "2026-10-06T00:00:00.000Z",
+    "updatedAt": "2026-10-06T00:00:00.000Z"
+  },
+  {
+    "id": "sample-004",
+    "fullName": "Taylor Brooks",
+    "studentId": "SM-2024-004",
+    "email": "taylor.brooks@student.example",
+    "avatarUri": "https://i.pravatar.cc/300?img=15",
+    "avatarSource": "url",
+    "createdAt": "2026-10-06T00:00:00.000Z",
+    "updatedAt": "2026-10-06T00:00:00.000Z"
+  },
+  {
+    "id": "sample-005",
+    "fullName": "Casey Patel",
+    "studentId": "SM-2024-005",
+    "email": "casey.patel@student.example",
+    "avatarUri": "https://i.pravatar.cc/300?img=16",
+    "avatarSource": "url",
+    "createdAt": "2026-10-06T00:00:00.000Z",
+    "updatedAt": "2026-10-06T00:00:00.000Z"
+  }
+]

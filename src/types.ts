@@ -28,5 +28,5 @@ export type TranslationKey =
   | 'cancel' | 'settings' | 'language' | 'english' | 'vietnamese'
   | 'confirmEditTitle' | 'confirmEditMessage' | 'confirmDeleteTitle' | 'confirmDeleteMessage'
   | 'yes' | 'yesDelete' | 'no' | 'requiredField' | 'invalidEmail' | 'duplicateStudentId'
-  | 'photoPermission' | 'photoError' | 'invalidImageUrl' | 'clearSearch' | 'languageSaved'
+  | 'photoPermission' | 'photoError' | 'avatarRequired' | 'invalidImageUrl' | 'clearSearch' | 'languageSaved'
   | 'studentNotFound' | 'saveError' | 'saved' | 'students';

@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Alert, KeyboardAvoidingView, Platform, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import * as ImagePicker from 'expo-image-picker';
 import * as FileSystem from 'expo-file-system/legacy';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -70,6 +71,7 @@ export function StudentFormScreen({ navigation, route }: Props) {
       }
       setDevicePhotoUri(persistentUri);
       setSourceMode('device');
+      setErrors((prev) => ({ ...prev, avatarUri: undefined }));
     } catch {
       setPhotoMessage(t('photoError'));
     }
@@ -84,7 +86,8 @@ export function StudentFormScreen({ navigation, route }: Props) {
     }
     if (!email.trim()) nextErrors.email = t('requiredField');
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) nextErrors.email = t('invalidEmail');
-    if (sourceMode === 'url' && imageUrl.trim() && !/^https?:\/\//i.test(imageUrl.trim())) {
+    if (!avatarUri.trim()) nextErrors.avatarUri = t('avatarRequired');
+    else if (sourceMode === 'url' && !/^https?:\/\//i.test(imageUrl.trim())) {
       nextErrors.avatarUri = t('invalidImageUrl');
     }
     setErrors(nextErrors);
