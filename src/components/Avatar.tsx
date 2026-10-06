@@ -8,7 +8,7 @@ export function Avatar({ uri, name, size = 58 }: Props) {
   const [imageFailed, setImageFailed] = useState(false);
   useEffect(() => setImageFailed(false), [uri]);
   const initials = name.trim().split(/\s+/).slice(-2).map((part) => part[0]?.toUpperCase()).join('') || '?';
-  const cornerRadius = Math.max(8, Math.round(size * 0.12));
+  const cornerRadius = Math.max(4, Math.round(size * 0.12));
   const avatarStyle = { width: size, height: size, borderRadius: cornerRadius };
   return (
     <View style={[styles.frame, avatarStyle]}>
